@@ -1,8 +1,10 @@
 language: python
 python: 3.5
 env:
-- TOXENV=py35
-- TOXENV=py34
+  - TOXENV=py35
+  - TOXENV=py36
+  - TOXENV=py37
+  - TOXENV=py38
 install: pip install -U tox
 script: tox -e ${TOXENV}
 deploy:
@@ -14,4 +16,4 @@ deploy:
   on:
     tags: true
     repo: starofrainnight/qchviewer
-    condition: "$TOXENV == py34"
+    condition: "$TOXENV == py38"
