@@ -18,7 +18,7 @@ test_requirements = [
 
 setup(
     name="qchviewer",
-    version="0.1.3",
+    version="version='0.1.4'",
     description="A simple script to directly open standalone Qt Help file by Assistant",
     long_description=long_description,
     author="Hong-She Liang",
