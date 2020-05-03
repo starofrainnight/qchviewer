@@ -3,12 +3,13 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file, open('HISTORY.rst') as history_file:
-    long_description = (readme_file.read() + "\n\n" + history_file.read())
+with open("README.rst") as readme_file, open("HISTORY.rst") as history_file:
+    long_description = readme_file.read() + "\n\n" + history_file.read()
 
 requirements = [
-    'click>=6.0',
-    'jinja2',
+    "click>=6.0",
+    "jinja2",
+    "whichcraft",
 ]
 
 test_requirements = [
@@ -16,33 +17,29 @@ test_requirements = [
 ]
 
 setup(
-    name='qchviewer',
-    version='0.1.3',
+    name="qchviewer",
+    version="0.1.3",
     description="A simple script to directly open standalone Qt Help file by Assistant",
     long_description=long_description,
     author="Hong-She Liang",
-    author_email='starofrainnight@gmail.com',
-    url='https://github.com/starofrainnight/qchviewer',
+    author_email="starofrainnight@gmail.com",
+    url="https://github.com/starofrainnight/qchviewer",
     packages=find_packages(),
-    entry_points={
-        'console_scripts': [
-            'qchviewer=qchviewer.__main__:main'
-        ]
-    },
+    entry_points={"console_scripts": ["qchviewer=qchviewer.__main__:main"]},
     include_package_data=True,
     install_requires=requirements,
     license="Apache Software License",
     zip_safe=False,
-    keywords='qchviewer',
+    keywords="qchviewer",
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Software License',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        "Development Status :: 2 - Pre-Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: Apache Software License",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
     ],
-    test_suite='tests',
-    tests_require=test_requirements
+    test_suite="tests",
+    tests_require=test_requirements,
 )
